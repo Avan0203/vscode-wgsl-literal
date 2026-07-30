@@ -1,6 +1,6 @@
 {
-  "fileTypes": ["js", "jsx", "ts", "tsx", "vue", "mjs", "html"],
-  "injectionSelector": "L:source -comment -string",
+  "fileTypes": ["js", "jsx", "ts", "tsx", "vue", "mjs", "html", "md"],
+  "injectionSelector": "L:(source.js | source.ts | source.tsx | source.jsx | source.js.jsx | source.vue | text.html.vue | meta.embedded.block.javascript | meta.embedded.block.typescript | meta.embedded.block.typescriptreact) -comment -string",
   "patterns": [
     {
       "begin": "(?i)(\\s?\\/\\*\\s?(wgsl)\\s?\\*\\/\\s?)(`)",
@@ -32,5 +32,5 @@
       ]
     }
   ],
-  "scopeName": "wgsl-literal"
+  "scopeName": "wgsl-literal-enhanced"
 }
