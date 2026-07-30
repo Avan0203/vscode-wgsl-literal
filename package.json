@@ -1,15 +1,15 @@
 {
-  "name": "wgsl-literal",
-  "displayName": "WGSL Literal",
-  "description": "Syntax highlighting for wgsl inside of JavaScript tagged template strings",
-  "version": "0.0.3",
-  "author": "Gianmarco Simone",
-  "publisher": "ggsimm",
-  "repository": {
-    "url": "https://github.com/gsimone/vscode-wgsl-literal.git"
+  "name": "wgsl-literal-enhanced",
+  "displayName": "WGSL Literal Enhanced",
+  "description": "An enhanced plugin based on the `vscode-wgsl-literal` plugin, adds WGSL syntax highlighting for js,vue,ts,tsx,html,md",
+  "version": "0.0.1",
+  "author": "Avan0203",
+  "publisher": "Avan0203",
+  "bugs":{
+    "url": "https://github.com/Avan0203/vscode-wgsl-literal/issues"
   },
-  "bugs": {
-    "url": "https://github.com/gsimone/vscode-wgsl-literal/issues"
+  "repository": {
+    "url": "https://github.com/Avan0203/vscode-wgsl-literal.git"
   },
   "engines": {
     "vscode": "^1.15.0"
@@ -21,7 +21,15 @@
     "shader",
     "wgsl-literal",
     "webgpu",
-    "javascript",
+    "highlight",
+    "markdown",
+    "html",
+    "vue",
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "mjs",
     "wgsl",
     "template"
   ],
@@ -37,12 +45,27 @@
           "source.js.jsx",
           "source.jsx",
           "source.ts",
-          "source.tsx"
+          "source.tsx",
+          "source.vue",
+          "text.html.vue",
+          "source.mjs",
+          "text.html.derivative",
+          "text.html.markdown"
         ],
-        "scopeName": "wgsl-literal",
+        "scopeName": "wgsl-literal-enhanced",
         "path": "./syntaxes/wgsl-literal.json",
         "embeddedLanguages": {
           "source.wgsl": "wgsl"
+        }
+      },
+      {
+        "scopeName": "markdown.wgsl.codeblock",
+        "path": "./syntaxes/wgsl-markdown-codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.wgsl": "wgsl"
         }
       }
     ]
